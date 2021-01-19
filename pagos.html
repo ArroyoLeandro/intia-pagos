@@ -139,8 +139,305 @@
     <div class="container-fluid">
       <!-- CABECERA -->
       <div class="container">
-        <div class="row"></div>
+        <div class="row">
+          <div class="col-12 col-md-8 mt-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h3 class="titulo-estado">Estado del plan vigente</h3>
+                <div class="detalles-plan d-flex flex-column flex-md-row justify-content-md-between align-items-center align-items-md-start text-center text-md-left">
+                  <div class="row text-center text-md-left">
+                    <div class="col-12 col-md-6 col-lg-3 mb-3 mb-md-0">
+                      <h5 class="titulo-abono">Abono vigente:</h5>
+                      <h3 class="tipo-plan">Plan Básico</h3>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6 my-3 my-md-0">
+                      <div class="plan">
+                        <h5 class="titulo-abono">Este plan incluye:</h5>
+                        <div class="item">
+                          <img src="assets/img/check.svg" alt="" height="20" width="20" /> <span> Perfiles de búsqueda <b>Ilimitados</b> </span>
+                        </div>
+                        <div class="item">
+                          <img src="assets/img/check.svg" alt="" height="20" width="20" /> <span> Alerta interesados <b> 10 Créditos</b> </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-12 col-lg-3 mt-3 mt-lg-0">
+                      <h5 class="titulo-abono">Vencimiento: <span> dd/mm/aaaa</span></h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 mt-4">
+            <div class="card">
+              <div class="card-body text-center plan-card amarillo">
+                <img src="assets/img/icon-alert.svg" alt="" width="40" height="40" />
+                <h3 class="titulo">Atención!</h3>
+                <h3 class="subtitulo">Tu plan esta proximo a vencer</h3>
+                <div class="btn btn-plan">RENOVA TU PLAN</div>
+              </div>
+
+              <!-- <div class="card-body text-center plan-card rojo">
+                <img src="assets/img/icon-vencido.svg" alt="" width="30" height="30" class="d-inline-block" />
+                <h3 class="titulo d-inline-block">Plan vencido</h3>
+                <h3 class="subtitulo">Renova tu abono para seguir utilizando la plataforma de Intia.</h3>
+                <div class="btn btn-plan">RENOVA TU PLAN</div>
+              </div>
+
+              <div class="card-body text-center plan-card verde">
+                <img src="assets/img/icon-activo.svg" alt="" width="40" height="40" />
+                <h3 class="titulo">Plan activo</h3>
+                <h3 class="subtitulo">Tu abono se enuentra vigente</h3>
+              </div>
+
+              <div class="card-body text-center plan-card azul">
+                <img src="assets/img/icon-info.svg" alt="" width="40" height="40" />
+                <h3 class="titulo">Plan activo</h3>
+                <h3 class="subtitulo">Tu pago se realizó recientemente</h3>
+              </div> -->
+            </div>
+          </div>
+        </div>
         <!-- row -->
+        <div class="row mt-4">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-12 col-md-6">
+                    <h3 class="titulo-estado">Gestiona tu suscripción</h3>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <div class="tipo-sub">
+                      <h3 class="text-toggle-left">Pago mensual</h3>
+                      <div class="center">
+                        <input type="checkbox" name="toggle" id="toggle" checked />
+                      </div>
+                      <h3 class="text-toggle-right">Pago anual (Ahorra 14%)</h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="row text-center text-md-left">
+                  <div class="col-12 col-md-6 col-lg-4 my-3 my-lg-0">
+                    <div class="card card-tipo-sub basico activo">
+                      <div class="card-header justify-content-center justify-content-md-start">
+                        <img src="assets/img/icon-plan-basico.svg" alt="" height="20" width="20" />
+                        <span>Plan Básico</span>
+                      </div>
+                      <div class="card-body">
+                        <h3 class="precio-sub"><b>$2500 </b> por mes</h3>
+                        <hr class="hr-sub basico" />
+                        <div class="plan">
+                          <h5 class="titulo-abono">Este plan incluye:</h5>
+                          <div class="item">
+                            <img src="assets/img/check.svg" alt="" height="20" width="20" />
+                            <span> Perfiles de búsqueda <b>Ilimitados</b> </span>
+                          </div>
+                          <div class="item">
+                            <img src="assets/img/check.svg" alt="" height="20" width="20" />
+                            <span> Alerta interesados <b> 10 Créditos</b> </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-4 my-3 my-lg-0">
+                    <div class="card card-tipo-sub avanzado">
+                      <div class="card-header justify-content-center justify-content-md-start">
+                        <img src="assets/img/icon-plan-avanzado.svg" alt="" height="20" width="20" />
+                        <span>Plan Avanzado</span>
+                      </div>
+                      <div class="card-body">
+                        <h3 class="precio-sub"><b>$3500 </b> por mes</h3>
+                        <hr class="hr-sub avanzado" />
+                        <div class="plan">
+                          <h5 class="titulo-abono">Este plan incluye:</h5>
+                          <div class="item">
+                            <img src="assets/img/check-avanzado.svg" alt="" height="20" width="20" />
+                            <span> Perfiles de búsqueda <b>Ilimitados</b> </span>
+                          </div>
+                          <div class="item">
+                            <img src="assets/img/check-avanzado.svg" alt="" height="20" width="20" />
+                            <span> Alerta interesados <b> 20 Créditos</b> </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-4 my-3 my-lg-0">
+                    <div class="card card-tipo-sub profesional">
+                      <div class="card-header justify-content-center justify-content-md-start">
+                        <img src="assets/img/icon-plan-pro.svg" alt="" height="20" width="20" />
+                        <span>Plan Profesional</span>
+                      </div>
+                      <div class="card-body">
+                        <h3 class="precio-sub"><b>$4500 </b> por mes</h3>
+                        <hr class="hr-sub profesional" />
+                        <div class="plan">
+                          <h5 class="titulo-abono">Este plan incluye:</h5>
+                          <div class="item">
+                            <img src="assets/img/check-profesional.svg" alt="" height="20" width="20" />
+                            <span> Perfiles de búsqueda <b>Ilimitados</b> </span>
+                          </div>
+                          <div class="item">
+                            <img src="assets/img/check-profesional.svg" alt="" height="20" width="20" />
+                            <span> Alerta interesados <b> 20 Créditos</b> </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-4 text-right">
+                  <a href="#" class="btn btn-pago">PROCEDE CON EL PAGO</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-body bg-transparent border-0">
+                <div class="row py-3">
+                  <div class="col-12">
+                    <div class="tabs">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <nav class="tabClass mb-4 bg-transparent">
+                            <div class="row">
+                              <div class="col-12 col-md-6">
+                                <h3 class="medio-pago-titulo">Paga con el medio de pago que quieras</h3>
+                              </div>
+                              <div class="col-12 col-md-6">
+                                <div class="nav nav-fill medios-pago" id="nav-tab" role="tablist">
+                                  <a
+                                    class="item-tab active"
+                                    id="nav-mercado-pago-tab"
+                                    data-toggle="tab"
+                                    href="#nav-mercado-pago"
+                                    role="tab"
+                                    aria-controls="nav-mercado-pago"
+                                    aria-selected="true"
+                                    >MERCADO PAGO</a
+                                  >
+                                  <span class="line"> | </span>
+                                  <a
+                                    class="item-tab"
+                                    id="nav-transferencia-pago-tab"
+                                    data-toggle="tab"
+                                    href="#nav-transferencia-pago"
+                                    role="tab"
+                                    aria-controls="nav-transferencia-pago"
+                                    aria-selected="false"
+                                  >
+                                    TRANSFERENCIA BANCARIA</a
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                          </nav>
+                          <div class="tab-content mt-2" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-mercado-pago" role="tabpanel" aria-labelledby="nav-mercado-pago-tab">
+                              <div class="card border-0">
+                                <div class="card-header bg-transparent card border-0 pt-3 d-flex flex-column flex-sm-row align-items-center">
+                                  <h3 class="tarjeta-titulo">Tarjetas de credito</h3>
+                                  <span>Hasta 12 cuotas</span>
+                                </div>
+                                <div class="card-body card border-0 pt-3">
+                                  <div class="row">
+                                    <div class="col-12">
+                                      <div class="tarjetas-credito">
+                                        <img src="assets/img/tarjetas/visa.png" alt="" width="60" height="40" />
+                                        <img src="assets/img/tarjetas/mastercard.png" alt="" width="60" height="40" />
+                                        <img src="assets/img/tarjetas/american.png" alt="" width="60" height="40" />
+                                        <img src="assets/img/tarjetas/patagonia.webp" alt="" width="60" height="40" />
+                                        <img src="assets/img/tarjetas/naranja.png" alt="" width="60" height="40" />
+                                        <img src="assets/img/tarjetas/nativa.png" alt="" width="60" height="40" />
+                                        <img src="assets/img/tarjetas/shopping.png" alt="" width="60" height="40" />
+                                        <img src="assets/img/tarjetas/cabal.png" alt="" width="60" height="40" />
+                                        <img src="assets/img/tarjetas/diner.png" alt="" width="60" height="40" />
+                                        <img src="assets/img/tarjetas/argencard.png" alt="" width="60" height="40" />
+                                        <img src="assets/img/tarjetas/walmart.png" alt="" width="60" height="40" />
+                                        <img src="assets/img/tarjetas/cordobesa.jpg" alt="" width="60" height="40" />
+                                        <img src="assets/img/tarjetas/cmr.png" alt="" width="60" height="40" />
+                                      </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                      <h3 class="tarjeta-titulo mt-5 mb-3">Tarjetas de debito</h3>
+                                      <div class="tarjetas-debito">
+                                        <img src="assets/img/tarjetas/visaDebito.png" alt="" width="50" height="40" />
+                                        <img src="assets/img/tarjetas/mastercardDebito.png" alt="" width="50" height="50" />
+                                        <img src="assets/img/tarjetas/maestro.png" alt="" width="50" height="40" />
+                                        <img src="assets/img/tarjetas/cabalDebito.png" alt="" width="50" height="40" />
+                                      </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                      <h3 class="tarjeta-titulo mt-5 mb-3">En efectivo</h3>
+                                      <div class="tarjetas-debito">
+                                        <img src="assets/img/tarjetas/pagoFacil.png" alt="" width="50" height="50" />
+                                        <img src="assets/img/tarjetas/rapipago.jpg" alt="" width="70" height="50" />
+                                        <img src="assets/img/tarjetas/cobroExpress.png" alt="" width="100" height="40" />
+                                        <img src="assets/img/tarjetas/link.png" alt="" width="50" height="50" />
+                                        <img src="assets/img/tarjetas/provinciaNet.png" alt="" width="120" height="50" />
+                                        <img src="assets/img/tarjetas/cargaVirtual.png" alt="" width="50" height="50" />
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="tab-pane fade" id="nav-transferencia-pago" role="tabpanel" aria-labelledby="nav-transferencia-pago-tab">
+                              <div class="card border-0">
+                                <div class="card-header bg-transparent card border-0 py-0">
+                                  <h3 class="datos-cuenta">DATOS DE LA CUENTA</h3>
+                                </div>
+                                <div class="card-body card border-0 pt-0">
+                                  <div class="row">
+                                    <div class="col-12 col-md-6">
+                                      <div class="row">
+                                        <div class="col-12 col-md-6 my-3">
+                                          <span class="info-titulo">Alias de CBU </span>
+                                          <span class="info-valor"> INTIA.PROPIEDADES </span>
+                                        </div>
+                                        <div class="col-12 col-md-6 my-3">
+                                          <span class="info-titulo">Cuit</span>
+                                          <span class="info-valor"> XX-XXXXXXXX-X </span>
+                                        </div>
+                                        <div class="col-12 col-md-6 my-3">
+                                          <span class="info-titulo">Numero de cuenta </span>
+                                          <span class="info-valor"> XXXXXXX-X XXX-X </span>
+                                        </div>
+                                        <div class="col-12 col-md-6 my-3">
+                                          <span class="info-titulo">Banco</span>
+                                          <span class="info-valor"> BBVA Frances </span>
+                                        </div>
+                                        <div class="col-12 col-md-6 my-3">
+                                          <span class="info-titulo">CBU </span>
+                                          <span class="info-valor"> XXXXXXXX-XXXXXXXXXXXXXX </span>
+                                        </div>
+                                        <div class="col-12 col-md-6 my-3">
+                                          <span class="info-titulo">DU</span>
+                                          <span class="info-valor"> XX.XXX.XXX </span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-12 col-md-6"></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <!-- container -->
     </div>

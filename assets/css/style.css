@@ -9,13 +9,16 @@
   --color-principal: #003d4c;
   --color-amarillo: #f8b122;
   --color-verde: #29a46b;
+  --color-azul: #228b9a;
+  --color-rojo: #e84129;
   --color-gris: #808181;
 
   /* tarjetas */
-  --pago-vigente: #29a46b;
+  --pago-vigente: #c1e1d3;
   --pago-reciente: #bbe1e4;
   --pago-proximo: #fbe5cd;
   --pago-vencido: #efd2d2;
+  --plan-activo: #daeef5;
 
   /* texto tarjeta */
   --texto-verde: #3bb080;
@@ -55,6 +58,7 @@ body {
   background-color: #f2f3f7;
   color: var(--color-gris);
   font-family: "Poppins", sans-serif !important;
+  font-weight: 400;
 }
 
 .dropdown-toggle::after {
@@ -234,8 +238,303 @@ input busqueda NAV
 
 /* =========== MAIN ============== */
 
+.titulo-estado {
+  color: var(--color-gris);
+  font-weight: 400;
+  font-size: 1.4rem;
+  padding: 10px 10px 20px;
+}
+
+.detalles-plan {
+  padding-left: 10px;
+}
+.titulo-abono {
+  color: var(--color-gris);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.titulo-abono span {
+  font-weight: 400;
+}
+.tipo-plan {
+  color: var(--color-principal);
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+.plan .item span {
+  color: var(--color-gris);
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+.plan .item span b {
+  font-weight: 800;
+}
+
+/* alerta plan */
+.plan-card {
+  max-height: 225px;
+  min-height: 225px;
+}
+.plan-card.amarillo {
+  background: var(--pago-proximo) !important;
+  color: var(--texto-amarillo);
+}
+.plan-card.rojo {
+  background: var(--pago-vencido) !important;
+  color: var(--texto-rojo);
+}
+.plan-card.verde {
+  background: var(--pago-vigente) !important;
+  color: var(--texto-verde);
+}
+.plan-card.azul {
+  background: var(--pago-reciente) !important;
+  color: var(--texto-azul);
+}
+
+.plan-card .titulo {
+  font-weight: 800 !important;
+  font-size: 1.3rem !important;
+  padding: 10px 0;
+}
+.plan-card .subtitulo {
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  padding: 10px 0;
+}
+
+.plan-card.rojo img {
+  margin: -10px 10px 0 0;
+}
+.plan-card .btn-plan {
+  color: white;
+  font-weight: 600;
+}
+.plan-card.amarillo .btn-plan {
+  background: var(--color-amarillo);
+}
+.plan-card.rojo .btn-plan {
+  background: var(--color-rojo);
+}
+
+/* Suscripción */
+.tipo-sub {
+  padding: 10px 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.text-toggle-left,
+.text-toggle-right,
+.center {
+  font-size: 0.8rem !important;
+  margin: 0;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+.center {
+  margin: 0 10px;
+  padding-bottom: 0px;
+}
+.text-toggle-left {
+  color: var(--texto-verde);
+  font-weight: 800;
+}
+.text-toggle-right {
+  font-weight: 400;
+  color: var(--texto-gris);
+}
+
+input[type="checkbox"] {
+  position: relative;
+  width: 60px;
+  height: 25px;
+  -webkit-appearance: none;
+  background: #c6c6c6;
+  outline: none;
+  border-radius: 20px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+}
+input:checked[type="checkbox"] {
+  background: var(--color-verde);
+}
+input[type="checkbox"]::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 20px;
+  top: 3.2px;
+  left: 38px;
+  background: #fff;
+  transform: scale(1.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+}
+input:checked[type="checkbox"]::before {
+  left: 5px;
+}
+
+/* ============================
+  CARDS TIPOS DE SUSCRIPCIONES
+============================== */
+.card-tipo-sub {
+  padding: 10px;
+  border-radius: 0px;
+  box-shadow: 1px 1px 5px #ccc;
+}
+.card-tipo-sub.basico.activo {
+  border: 1px solid var(--color-principal);
+  background: var(--plan-activo);
+}
+.card-tipo-sub.avanzado.activo {
+  border: 1px solid var(--color-azul);
+}
+.card-tipo-sub.profesional.activo {
+  border: 1px solid var(--color-verde);
+}
+.card-tipo-sub > .card-header {
+  display: flex;
+  align-items: center;
+  background: transparent !important;
+  border: none !important;
+}
+.card-tipo-sub > .card-header > span {
+  padding-left: 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.card-tipo-sub .card-body {
+  padding: 10px;
+  padding-left: 20px;
+}
+.precio-sub {
+  font-size: 0.9rem;
+  color: var(--color-gris);
+  font-weight: 400;
+}
+.precio-sub b {
+  font-size: 1.6rem;
+  font-weight: 600 !important;
+  display: block;
+}
+.hr-sub {
+  margin-bottom: 1.4rem;
+}
+.hr-sub.basico {
+  background: var(--color-principal);
+}
+.hr-sub.avanzado {
+  background: var(--color-azul);
+}
+.hr-sub.profesional {
+  background: var(--color-verde);
+}
+
+.card-tipo-sub.basico > .card-header > span,
+.card-tipo-sub.basico .plan .item span b {
+  color: var(--color-principal);
+}
+.card-tipo-sub.avanzado > .card-header > span,
+.card-tipo-sub.avanzado .plan .item span b {
+  color: var(--color-azul);
+}
+.card-tipo-sub.profesional > .card-header > span,
+.card-tipo-sub.profesional .plan .item span b {
+  color: var(--color-verde);
+}
+
+.btn-pago {
+  background: var(--color-principal);
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+}
+.btn-pago:hover {
+  color: white;
+  text-decoration: none;
+}
+
+/* =============MEDIOS DE PAGO================= */
+.medio-pago-titulo {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+.medios-pago {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--color-principal);
+}
+.medios-pago .line {
+  font-weight: 400;
+  color: var(--color-principal);
+  margin: 0 10px;
+}
+.medios-pago a,
+.medios-pago a:hover {
+  text-decoration: none;
+  color: var(--color-principal);
+}
+
+.medios-pago .item-tab.active {
+  color: var(--texto-amarillo);
+  font-weight: 600;
+}
+
+/* Transferencia tab */
+
+#nav-transferencia-pago .datos-cuenta {
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: var(--color-principal);
+}
+#nav-transferencia-pago .info-titulo {
+  font-size: 0.7rem;
+  color: var(--color-gris);
+  font-weight: 400;
+  display: block;
+}
+#nav-transferencia-pago .info-valor {
+  font-size: 1rem;
+  color: var(--color-principal);
+  font-weight: 400;
+  display: block;
+}
+
+.tarjeta-titulo {
+  font-weight: 400;
+  color: var(--color-gris);
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+#nav-mercado-pago .card-header .tarjeta-titulo {
+  display: inline-block !important;
+  margin: 0 10px 0 0;
+}
+#nav-mercado-pago .card-header span {
+  font-size: 0.8rem;
+  background: var(--color-verde);
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #fff;
+  display: inline-block;
+  width: 120px;
+}
+.tarjetas-credito,
+.tarjetas-debito,
+.efectivo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.tarjetas-credito img,
+.tarjetas-debito img,
+.efectivo img {
+  margin: 10px 20px;
+}
 /* ====Footer ====*/
-/* Footer */
 .bg-footer {
   background: #f2f3f7;
 }
@@ -271,6 +570,15 @@ footer h3 {
   width: 150px;
   height: auto;
 }
+
+@media (min-width: 768px) {
+  .text-toggle-left,
+  .text-toggle-right,
+  .center {
+    font-size: 1rem !important;
+  }
+}
+
 /*=================================
   MEDIA QUERYS Navegacion
 ================================ */
